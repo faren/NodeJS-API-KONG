@@ -1,0 +1,14 @@
+{
+    "name": "docker_node_for_kong",
+    "version": "1.0.0",
+    "description": "Node.js on Docker for kong",
+    "author": "Faren",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "express": "^4.16.1",
+        "body-parser": "1.18.3"
+    }
+}
