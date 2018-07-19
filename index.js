@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-const workers = [
+const customers = [
   {
     id: 5,
     first_name: 'Dodol',
@@ -30,12 +30,12 @@ const clients = [
 
 app.use(bodyParser.json());
 
-app.get('/api/v1/workers', (req, res) => {
-  res.json(workers);
+app.get('/api/v1/customers', (req, res) => {
+  res.json(customers);
 });
 
-app.get('/api/v1/workers/:id', (req, res) => {
-  res.json(workers[req.params.id]);
+app.get('/api/v1/customers/:id', (req, res) => {
+  res.json(customers[req.params.id]);
 });
 
 app.get('/api/v1/clients', (req, res) => {
