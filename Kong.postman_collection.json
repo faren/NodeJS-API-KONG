@@ -270,27 +270,28 @@
 		},
 		{
 			"id": "4153a423-882c-d2f3-73b8-fa8d1673c62c",
-			"headers": "Host: api.helpster.com\n",
+			"headers": "Host: api.ct.id\n",
 			"headerData": [
 				{
 					"key": "Host",
-					"value": "api.helpster.com",
+					"value": "api.ct.id",
+					"description": "",
 					"enabled": true
 				}
 			],
-			"url": "localhost:9000/api/v1/clients",
+			"url": "localhost:9000/api/v1/customers",
 			"queryParams": [],
+			"events": [],
 			"pathVariables": {},
 			"pathVariableData": [],
 			"method": "GET",
 			"data": null,
 			"dataMode": "params",
 			"auth": null,
+			"time": 1532080003937,
 			"name": "Consume service",
-			"responses": [],
 			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"collectionRequestId": "46971e01-fc63-26b3-04ec-e590d456493e",
+			"responses": [],
 			"currentHelper": null,
 			"helperAttributes": null
 		},
