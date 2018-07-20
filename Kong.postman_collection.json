@@ -1,677 +1,184 @@
 {
+	"id": "f47dbccf-c441-2e90-353b-af218508d104",
 	"name": "Kong",
-	"description": "",
-	"order": [],
-	"folders_order": [
-		"789546b9-75df-8e94-11fe-bfd6ab270d95",
-		"43a9070d-3486-9279-7716-0c43e2414446",
-		"7a660237-bc4f-daa1-0941-4029d67396cd",
-		"0369210e-8d6f-48cc-0075-dc0fba35c656",
-		"7c6b478c-9836-5485-720d-0a1991c99f27",
-		"7be444ca-d85a-ea35-63f9-4ae5ec87c92c",
-		"5145499e-00ff-3444-cf16-fbb4d54190bc"
+	"description": "This collection is for tutorial KONG basic",
+	"order": [
+		"4153a423-882c-d2f3-73b8-fa8d1673c62c"
 	],
-	"owner": "3394051",
-	"events": [],
-	"variables": [],
-	"auth": null,
-	"id": "253085a4-5b10-8b9c-a718-74072b0c4089",
-	"lastUpdatedBy": "3394051",
 	"folders": [
 		{
-			"name": "Consume",
+			"name": "Consumer",
 			"description": "",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
 			"order": [
-				"9d11fc94-bf2d-5478-fd12-1893c03a6023",
-				"06aefdb5-e539-e69e-e0a4-f184008a0861"
+				"967a263f-f95c-0e65-7894-c83311dd1887",
+				"3329d880-af93-7dc9-7fd0-2f67cd2e4b04",
+				"44ba6b5a-7046-b78d-37e6-7e2506ef7786"
 			],
 			"owner": "3394051",
 			"folders_order": [],
 			"auth": null,
-			"id": "7a660237-bc4f-daa1-0941-4029d67396cd",
-			"folder": null,
-			"lastUpdatedBy": "3394051",
-			"transactionId": "bffdf469-7e54-482a-bb0d-58c1a27b1ebe"
+			"id": "0a7058db-f271-2ba0-7bed-d2385c0b18e3"
 		},
 		{
-			"name": "Consumers",
+			"name": "Plugin",
 			"description": "",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
 			"order": [
-				"9bc6eda4-3c6e-2e63-3f70-b71a6a438e57",
-				"e83015c6-4ec3-5cdf-d4dc-35830c57d8bf",
-				"19cfbcb5-8521-968e-212a-bc131cb03fc4",
-				"e952ab76-2876-34d9-a93f-63bf33a1567c",
-				"87e2fe3c-7017-a8e6-6c0b-8bd514cc9f91"
+				"9f88524b-2cf8-549f-3b3f-b95d2e555133",
+				"2a87286c-f9a6-0e2c-97f0-44451c523050",
+				"1f8d9d27-6c1a-694a-d39f-730c32929cb8"
 			],
 			"owner": "3394051",
 			"folders_order": [],
 			"auth": null,
-			"id": "7be444ca-d85a-ea35-63f9-4ae5ec87c92c",
-			"folder": null,
-			"lastUpdatedBy": "3394051",
-			"transactionId": "bffdf469-7e54-482a-bb0d-58c1a27b1ebe"
-		},
-		{
-			"name": "OAuth & ACL",
-			"description": "",
-			"order": [
-				"d7e68b21-9075-b41c-da88-53342f3b50d6",
-				"bcfe6d21-f148-6e71-ec1e-95499e27e5de",
-				"b4d5ee65-214d-1e8a-f11f-df970f7043f3",
-				"f2e623d1-5756-3316-7bc2-e29ebc920be1",
-				"c89b6b3f-060b-431d-e341-d1bc68a04d1f",
-				"c0a6329f-46d4-091a-4e8b-76fb40e707e6",
-				"866f493e-0d25-b0e1-8433-9e1af73da1b2",
-				"076ca483-5363-8395-0117-db6b86859e13",
-				"555a2492-8987-bfcf-df0e-89a8b8437c77",
-				"22b4a24e-1779-e458-2ddd-faa6615771c2",
-				"7b79f570-c13f-179c-cbaa-5a55b7c0f5ba"
-			],
-			"owner": "3394051",
-			"folders_order": [],
-			"auth": null,
-			"id": "5145499e-00ff-3444-cf16-fbb4d54190bc",
-			"folder": null,
-			"lastUpdatedBy": "3394051",
-			"transactionId": "bffdf469-7e54-482a-bb0d-58c1a27b1ebe"
-		},
-		{
-			"name": "Plugins",
-			"description": "",
-			"order": [
-				"687d5766-7474-2ce4-f409-811a08b26e4c",
-				"6f62840d-40c2-9f88-18e3-2086bcd8bc77",
-				"1971bfe0-5749-b542-1344-f61401addd9a",
-				"81f846fd-62cd-f5b9-c80e-0afb03d3b6a7",
-				"517ea37b-1bac-92da-4dea-84517452b89a",
-				"5331ec29-fcd0-1dda-8eb5-d2e953e457e0",
-				"4918f488-d023-06c7-1b52-cd2ebaf69383",
-				"faf1da9a-4407-7e23-b43f-693bddb7d155"
-			],
-			"owner": "3394051",
-			"folders_order": [],
-			"auth": null,
-			"id": "0369210e-8d6f-48cc-0075-dc0fba35c656",
-			"folder": null,
-			"lastUpdatedBy": "3394051",
-			"transactionId": "bffdf469-7e54-482a-bb0d-58c1a27b1ebe"
+			"id": "838df60e-fea6-60da-af53-41f9d314c40a"
 		},
 		{
 			"name": "Routes",
 			"description": "",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
 			"order": [
-				"82eac68e-a155-7f00-2be3-f28a361cbac9",
-				"dfbd7448-ce8a-590b-c7d1-55d287f472f0",
-				"ddb695fd-1625-33fe-49c5-b0049e31636d",
-				"22d100ec-76dc-71ec-1285-ae01d2c9f669",
-				"dad48170-e1f5-6859-e6a8-d172cabc0816"
+				"86bd84e2-1bfe-c0cb-e7d8-03581b241b57",
+				"356ad4fb-997a-f700-d01e-9e7d60faabca",
+				"15a57f51-e043-94b4-13dc-afed3e09bb4f"
 			],
 			"owner": "3394051",
 			"folders_order": [],
 			"auth": null,
-			"id": "43a9070d-3486-9279-7716-0c43e2414446",
-			"folder": null,
-			"lastUpdatedBy": "3394051",
-			"transactionId": "bffdf469-7e54-482a-bb0d-58c1a27b1ebe"
-		},
-		{
-			"name": "Server",
-			"description": "",
-			"order": [
-				"1f4957be-4b3a-2508-b987-4fab10600718",
-				"44568384-d807-e8d4-19a6-776ede9f584d"
-			],
-			"owner": "3394051",
-			"folders_order": [],
-			"auth": null,
-			"id": "7c6b478c-9836-5485-720d-0a1991c99f27",
-			"folder": null,
-			"lastUpdatedBy": "3394051",
-			"transactionId": "bffdf469-7e54-482a-bb0d-58c1a27b1ebe"
+			"id": "69238981-1df9-370f-fd16-c4674117021a"
 		},
 		{
 			"name": "Services",
 			"description": "",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
 			"order": [
-				"c4bc7327-4358-00bf-a2ff-30c03215ca9d",
-				"8fb3f5ee-a230-393d-d507-3c6b576d03f7",
-				"72439bd7-3e04-f0bd-c575-528aea775e96",
-				"b1b8e456-6697-4cbf-f3ff-91e75f009662",
-				"a5c44d3d-ee88-6a90-96ff-4bdcfe1ba2e6"
+				"3d937530-ba52-ba72-5191-d0ae0e896735",
+				"18aecca7-e569-4cf7-fa0b-38d105c28ceb",
+				"b2ae9cd3-9b8b-9f13-6dec-6591da0da5e7"
 			],
 			"owner": "3394051",
 			"folders_order": [],
 			"auth": null,
-			"id": "789546b9-75df-8e94-11fe-bfd6ab270d95",
-			"folder": null,
-			"lastUpdatedBy": "3394051",
-			"transactionId": "bffdf469-7e54-482a-bb0d-58c1a27b1ebe"
+			"id": "721d593f-a795-6b3b-915b-4f6db8101a81"
 		}
 	],
-	"transactionId": "bffdf469-7e54-482a-bb0d-58c1a27b1ebe",
-	"hasRequests": true,
+	"folders_order": [
+		"721d593f-a795-6b3b-915b-4f6db8101a81",
+		"69238981-1df9-370f-fd16-c4674117021a",
+		"838df60e-fea6-60da-af53-41f9d314c40a",
+		"0a7058db-f271-2ba0-7bed-d2385c0b18e3"
+	],
+	"timestamp": 1531913071877,
+	"owner": "3394051",
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
 	"requests": [
 		{
-			"id": "06aefdb5-e539-e69e-e0a4-f184008a0861",
-			"headers": "Host: example.com\napikey: 000000\n",
-			"headerData": [
-				{
-					"key": "Host",
-					"value": "example.com",
-					"enabled": true
-				},
-				{
-					"key": "apikey",
-					"value": "000000",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9000",
-			"folder": "7a660237-bc4f-daa1-0941-4029d67396cd",
+			"id": "15a57f51-e043-94b4-13dc-afed3e09bb4f",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:9001/routes/034c40b4-d9d9-4e34-a8d3-94b0a2194cd6",
+			"folder": "69238981-1df9-370f-fd16-c4674117021a",
 			"queryParams": [],
-			"pathVariables": [],
+			"pathVariables": {},
 			"pathVariableData": [],
-			"method": "GET",
+			"method": "DELETE",
 			"data": null,
 			"dataMode": "params",
 			"auth": null,
-			"name": "Consume Service with API-KEY",
+			"name": "Routes - Delete",
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
 			"currentHelper": null,
 			"helperAttributes": null
 		},
 		{
-			"id": "076ca483-5363-8395-0117-db6b86859e13",
+			"id": "18aecca7-e569-4cf7-fa0b-38d105c28ceb",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
 					"key": "Content-Type",
 					"value": "application/json",
+					"description": "",
 					"enabled": true
 				}
 			],
-			"url": "localhost:9001/services/api-v1-clients/plugins",
+			"url": "localhost:9001/services/",
+			"folder": "721d593f-a795-6b3b-915b-4f6db8101a81",
 			"queryParams": [],
-			"pathVariables": [],
+			"events": [],
+			"pathVariables": {},
 			"pathVariableData": [],
 			"method": "POST",
 			"data": [],
 			"dataMode": "raw",
 			"auth": null,
-			"name": "[Local] OAuth - Enable OAuth Plugin",
-			"rawModeData": "{\n  \"name\": \"oauth2\",\n  \"config.scopes\": [\"read\", \"write\"],\n  \"config.mandatory_scope\": true,\n  \"config.enable_password_grant\": true,\n  \"config.accept_http_if_already_terminated\": true,\n  \"config.token_expiration\": 180,\n  \"config.global_credentials\": true\n}",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
+			"time": 1531988915850,
+			"name": "Services - Create",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
 			"currentHelper": null,
-			"helperAttributes": null
+			"helperAttributes": null,
+			"rawModeData": "{\n  \"name\": \"api-v1-customers\",\n  \"url\": \"http://172.19.0.4:10000\"\n}"
 		},
 		{
-			"id": "1971bfe0-5749-b542-1344-f61401addd9a",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/plugins",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Plugins - List All Plugins",
-			"folder": "0369210e-8d6f-48cc-0075-dc0fba35c656",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "19cfbcb5-8521-968e-212a-bc131cb03fc4",
+			"id": "1f8d9d27-6c1a-694a-d39f-730c32929cb8",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
 					"key": "Content-Type",
 					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/consumers/8f46d90a-25ab-4025-90e5-fe6538b394cc",
-			"folder": "7be444ca-d85a-ea35-63f9-4ae5ec87c92c",
-			"queryParams": [],
-			"events": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "fa5431bd-b3c0-4cf5-8f2c-394a0cbf9250",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "DELETE",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "Consumers - Delete",
-			"description": "Notes:\n\n- Delete consumer also remove all plugins configuration associated with this consumer.",
-			"rawModeData": "",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"preRequestScript": null,
-			"tests": null,
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "1f4957be-4b3a-2508-b987-4fab10600718",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"auth": null,
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"name": "Server - Info",
-			"descriptionFormat": "html",
-			"folder": "7c6b478c-9836-5485-720d-0a1991c99f27",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "22b4a24e-1779-e458-2ddd-faa6615771c2",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
+					"description": "",
 					"enabled": true
 				}
 			],
 			"url": "localhost:9001/services/api-v1-workers/plugins",
 			"queryParams": [],
-			"pathVariables": [],
+			"pathVariables": {},
 			"pathVariableData": [],
+			"events": [],
+			"auth": null,
 			"method": "POST",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
 			"data": [],
 			"dataMode": "raw",
-			"auth": null,
-			"name": "[Local] ACL - Enable ACL Plugin",
-			"rawModeData": "{\n  \"name\": \"acl\",\n  \"config.whitelist\": \"group-api-v1-workers\"\n}",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
+			"name": "Plugin - Add service to OAuth",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1531914145559,
+			"version": 2,
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
+			"folder": "838df60e-fea6-60da-af53-41f9d314c40a",
 			"currentHelper": null,
-			"helperAttributes": null
+			"helperAttributes": null,
+			"rawModeData": "{\n  \"name\": \"oauth2\",\n  \"config.scopes\": [\"read\", \"write\"],\n  \"config.mandatory_scope\": true,\n  \"config.enable_password_grant\": true,\n  \"config.accept_http_if_already_terminated\": true,\n  \"config.token_expiration\": 180,\n  \"config.global_credentials\": true\n}"
 		},
 		{
-			"id": "22d100ec-76dc-71ec-1285-ae01d2c9f669",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/services/api-v1-clients/routes/",
-			"folder": "43a9070d-3486-9279-7716-0c43e2414446",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "[Local] Routes - Create",
-			"rawModeData": "{\n  \"hosts\": [\"api.helpster.com\"],\n  \"paths\": [\"/api/v1/clients\"]\n}",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "44568384-d807-e8d4-19a6-776ede9f584d",
+			"id": "2a87286c-f9a6-0e2c-97f0-44451c523050",
 			"headers": "",
 			"headerData": [],
-			"url": "localhost:9001/status",
+			"url": "localhost:9001/plugins",
 			"queryParams": [],
-			"pathVariables": [],
+			"pathVariables": {},
 			"pathVariableData": [],
-			"auth": null,
 			"method": "GET",
 			"data": null,
 			"dataMode": "params",
-			"name": "Server - Status",
-			"descriptionFormat": "html",
-			"folder": "7c6b478c-9836-5485-720d-0a1991c99f27",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "4918f488-d023-06c7-1b52-cd2ebaf69383",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/plugins/8a8528d5-550e-434b-a106-bb44beadbbfc",
-			"folder": "0369210e-8d6f-48cc-0075-dc0fba35c656",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "PATCH",
-			"data": [],
-			"dataMode": "raw",
 			"auth": null,
-			"name": "Plugins - Enable Plugin",
-			"rawModeData": "{\n  \"enabled\": true\n}",
+			"name": "Plugins - List All Plugins copy",
+			"folder": "838df60e-fea6-60da-af53-41f9d314c40a",
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
 			"currentHelper": null,
 			"helperAttributes": null
 		},
 		{
-			"id": "517ea37b-1bac-92da-4dea-84517452b89a",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/plugins/8a8528d5-550e-434b-a106-bb44beadbbfc",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "PATCH",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "Plugins - Disable Plugin",
-			"rawModeData": "{\n  \"enabled\": false\n}",
-			"folder": "0369210e-8d6f-48cc-0075-dc0fba35c656",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "5331ec29-fcd0-1dda-8eb5-d2e953e457e0",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/plugins/ae5114ae-5e9b-4f20-b471-53ce8d1649c0",
-			"folder": "0369210e-8d6f-48cc-0075-dc0fba35c656",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "PATCH",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "Plugins - Disable Plugin copy",
-			"rawModeData": "{\n  \"enabled\": false\n}",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "555a2492-8987-bfcf-df0e-89a8b8437c77",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/services/oauth/plugins",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "[Local] OAuth - Enable OAuth Plugin for Service OAuth",
-			"rawModeData": "{\n  \"name\": \"oauth2\",\n  \"config.scopes\": [\"read\", \"write\"],\n  \"config.mandatory_scope\": true,\n  \"config.enable_password_grant\": true,\n  \"config.accept_http_if_already_terminated\": true,\n  \"config.token_expiration\": 180,\n  \"config.global_credentials\": true\n}",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "687d5766-7474-2ce4-f409-811a08b26e4c",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/plugins/enabled",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"auth": null,
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"name": "Plugins - Enabled",
-			"descriptionFormat": "html",
-			"folder": "0369210e-8d6f-48cc-0075-dc0fba35c656",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "6f62840d-40c2-9f88-18e3-2086bcd8bc77",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/services/example-service/plugins",
-			"folder": "0369210e-8d6f-48cc-0075-dc0fba35c656",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "Plugins - Add Plugin to Service",
-			"rawModeData": "{\n  \"name\": \"key-auth\"\n}",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "72439bd7-3e04-f0bd-c575-528aea775e96",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/services/204876a1-7a78-4fb2-9c7c-8804d310d8f5",
-			"folder": "789546b9-75df-8e94-11fe-bfd6ab270d95",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "DELETE",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Services - Delete",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "7b79f570-c13f-179c-cbaa-5a55b7c0f5ba",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/consumers/satusatu@gmail.com/acls",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "[Local] ACL - Associate Consumer",
-			"rawModeData": "{\n  \"group\": \"group-api-v1-workers\"\n}",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "81f846fd-62cd-f5b9-c80e-0afb03d3b6a7",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/plugins/8a8528d5-550e-434b-a106-bb44beadbbfc",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "DELETE",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Plugins - Delete Plugin",
-			"folder": "0369210e-8d6f-48cc-0075-dc0fba35c656",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "82eac68e-a155-7f00-2be3-f28a361cbac9",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/services/example-service/routes/",
-			"folder": "43a9070d-3486-9279-7716-0c43e2414446",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "Routes - Create",
-			"rawModeData": "{\n  \"hosts\": [\"example.com\"]\n}",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "866f493e-0d25-b0e1-8433-9e1af73da1b2",
-			"headers": "Host: example.com\nContent-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Host",
-					"value": "example.com",
-					"enabled": true
-				},
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "https://localhost:9443/oauth2/token",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "OAuth - Refresh Token",
-			"rawModeData": "{\n  \"grant_type\": \"refresh_token\",\n  \"client_id\": \"CLIENT_ID_001\",\n  \"client_secret\": \"CLIENT_SECRET_001\",\n  \"refresh_token\": \"VkGWFc6xeLNAuGvhUKoXHMYeUbeOXopH\"\n}",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "87e2fe3c-7017-a8e6-6c0b-8bd514cc9f91",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/consumers/iwan.junaid@gmail.com",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"auth": null,
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"name": "Consumers - Retrieve",
-			"descriptionFormat": "html",
-			"folder": "7be444ca-d85a-ea35-63f9-4ae5ec87c92c",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "8fb3f5ee-a230-393d-d507-3c6b576d03f7",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/services",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"auth": null,
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"name": "Services - List",
-			"descriptionFormat": "html",
-			"folder": "789546b9-75df-8e94-11fe-bfd6ab270d95",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "9bc6eda4-3c6e-2e63-3f70-b71a6a438e57",
+			"id": "3329d880-af93-7dc9-7fd0-2f67cd2e4b04",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
@@ -681,7 +188,7 @@
 				}
 			],
 			"url": "localhost:9001/consumers",
-			"folder": "7be444ca-d85a-ea35-63f9-4ae5ec87c92c",
+			"folder": "0a7058db-f271-2ba0-7bed-d2385c0b18e3",
 			"queryParams": [],
 			"events": [
 				{
@@ -695,7 +202,7 @@
 					}
 				}
 			],
-			"pathVariables": [],
+			"pathVariables": {},
 			"pathVariableData": [],
 			"method": "POST",
 			"data": [],
@@ -704,14 +211,65 @@
 			"name": "Consumers - Create",
 			"rawModeData": "{\n  \"username\": \"tigatiga@gmail.com\",\n  \"custom_id\": \"33\"\n}",
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
 			"preRequestScript": null,
 			"tests": null,
 			"currentHelper": null,
 			"helperAttributes": null
 		},
 		{
-			"id": "9d11fc94-bf2d-5478-fd12-1893c03a6023",
+			"id": "356ad4fb-997a-f700-d01e-9e7d60faabca",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:9001/services/api-v1-customers/routes/",
+			"folder": "69238981-1df9-370f-fd16-c4674117021a",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1531997129318,
+			"name": "Routes - Create",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n  \"hosts\": [\"api.ct.id\"],\n  \"paths\": [\"/api/v1/customers\"]\n}"
+		},
+		{
+			"id": "3d937530-ba52-ba72-5191-d0ae0e896735",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:9001/services",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"auth": null,
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"name": "Services - List",
+			"descriptionFormat": "html",
+			"folder": "721d593f-a795-6b3b-915b-4f6db8101a81",
+			"responses": [],
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "4153a423-882c-d2f3-73b8-fa8d1673c62c",
 			"headers": "Host: api.helpster.com\n",
 			"headerData": [
 				{
@@ -721,9 +279,8 @@
 				}
 			],
 			"url": "localhost:9000/api/v1/clients",
-			"folder": "7a660237-bc4f-daa1-0941-4029d67396cd",
 			"queryParams": [],
-			"pathVariables": [],
+			"pathVariables": {},
 			"pathVariableData": [],
 			"method": "GET",
 			"data": null,
@@ -731,12 +288,14 @@
 			"auth": null,
 			"name": "Consume service",
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
+			"collectionRequestId": "46971e01-fc63-26b3-04ec-e590d456493e",
 			"currentHelper": null,
 			"helperAttributes": null
 		},
 		{
-			"id": "a5c44d3d-ee88-6a90-96ff-4bdcfe1ba2e6",
+			"id": "44ba6b5a-7046-b78d-37e6-7e2506ef7786",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
@@ -745,259 +304,46 @@
 					"enabled": true
 				}
 			],
-			"url": "localhost:9001/services/",
+			"url": "localhost:9001/consumers/8f46d90a-25ab-4025-90e5-fe6538b394cc",
+			"folder": "0a7058db-f271-2ba0-7bed-d2385c0b18e3",
 			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "[Local] Services - Create OAuth Service",
-			"rawModeData": "{\n  \"name\": \"oauth\",\n  \"url\": \"http://192.168.128.1:10000/oauth\"\n}",
-			"folder": "789546b9-75df-8e94-11fe-bfd6ab270d95",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "b1b8e456-6697-4cbf-f3ff-91e75f009662",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
+			"events": [
 				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
+					"listen": "prerequest",
+					"script": {
+						"id": "fa5431bd-b3c0-4cf5-8f2c-394a0cbf9250",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			],
-			"url": "localhost:9001/services/",
-			"folder": "789546b9-75df-8e94-11fe-bfd6ab270d95",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "[Local] Services - Create",
-			"rawModeData": "{\n  \"name\": \"api-v1-clients\",\n  \"url\": \"http://192.168.128.1:10000/api/v1/clients\"\n}",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "b4d5ee65-214d-1e8a-f11f-df970f7043f3",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/plugins/d9343001-3a84-489d-835a-135a43ef0d5c",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "OAuth - Retrieve OAuth Plugin Information",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "bcfe6d21-f148-6e71-ec1e-95499e27e5de",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/plugins/04a8a01b-06de-44ba-a9a3-db78f918c2a9",
-			"queryParams": [],
-			"pathVariables": [],
+			"pathVariables": {},
 			"pathVariableData": [],
 			"method": "DELETE",
 			"data": [],
 			"dataMode": "raw",
 			"auth": null,
-			"name": "OAuth - Delete OAuth Plugin",
-			"rawModeData": "{\n  \"name\": \"oauth2\",\n  \"config.scopes\": [\"email\", \"phone\"],\n  \"config.mandatory_scope\": true,\n  \"config.enable_password_grant\": true\n}",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
+			"name": "Consumers - Delete",
+			"description": "Notes:\n\n- Delete consumer also remove all plugins configuration associated with this consumer.",
+			"rawModeData": "",
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
+			"preRequestScript": null,
+			"tests": null,
 			"currentHelper": null,
 			"helperAttributes": null
 		},
 		{
-			"id": "c0a6329f-46d4-091a-4e8b-76fb40e707e6",
-			"headers": "Host: api.helpster.com\nAuthorization: Bearer u75Lm3gDN9paT9z2vn02NlX5U1GOS2Na\n",
-			"headerData": [
-				{
-					"key": "Host",
-					"value": "api.helpster.com",
-					"enabled": true
-				},
-				{
-					"key": "Authorization",
-					"value": "Bearer u75Lm3gDN9paT9z2vn02NlX5U1GOS2Na",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9000/api/v1/workers/0",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Consume Service",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "c4bc7327-4358-00bf-a2ff-30c03215ca9d",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/services/",
-			"folder": "789546b9-75df-8e94-11fe-bfd6ab270d95",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "Services - Create",
-			"rawModeData": "{\n  \"name\": \"example-service\",\n  \"url\": \"http://mockbin.org\"\n}",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "c89b6b3f-060b-431d-e341-d1bc68a04d1f",
-			"headers": "Content-Type: application/json\nHost: api.helpster.com\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				},
-				{
-					"key": "Host",
-					"value": "api.helpster.com",
-					"enabled": true
-				}
-			],
-			"url": "https://localhost:9443/oauth/oauth2/token/",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "OAuth - Request Token",
-			"rawModeData": "{\n  \"client_id\": \"CLIENT_ID_22\",\n  \"client_secret\": \"CLIENT_SECRET_22\",\n  \"grant_type\": \"password\",\n  \"provision_key\": \"tPC4XdJkbMlLWTOVa3rMHW4CFVUapAMk\",\n  \"authenticated_userid\": \"duadua@gmail.com\",\n  \"scope\": \"read\"\n}",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "d7e68b21-9075-b41c-da88-53342f3b50d6",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/services/example-service/plugins",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "OAuth - Enable OAuth Plugin",
-			"rawModeData": "{\n  \"name\": \"oauth2\",\n  \"config.scopes\": [\"email\", \"phone\"],\n  \"config.mandatory_scope\": true,\n  \"config.enable_password_grant\": true,\n  \"config.accept_http_if_already_terminated\": true,\n  \"config.token_expiration\": 180\n}",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "dad48170-e1f5-6859-e6a8-d172cabc0816",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/services/oauth/routes/",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "[Local] Routes - Create OAuth Route",
-			"rawModeData": "{\n  \"hosts\": [\"api.helpster.com\"],\n  \"paths\": [\"/oauth\"]\n}",
-			"folder": "43a9070d-3486-9279-7716-0c43e2414446",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "ddb695fd-1625-33fe-49c5-b0049e31636d",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/routes/034c40b4-d9d9-4e34-a8d3-94b0a2194cd6",
-			"folder": "43a9070d-3486-9279-7716-0c43e2414446",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "DELETE",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Routes - Delete",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "dfbd7448-ce8a-590b-c7d1-55d287f472f0",
+			"id": "86bd84e2-1bfe-c0cb-e7d8-03581b241b57",
 			"headers": "",
 			"headerData": [],
 			"url": "localhost:9001/routes",
-			"folder": "43a9070d-3486-9279-7716-0c43e2414446",
+			"folder": "69238981-1df9-370f-fd16-c4674117021a",
 			"queryParams": [],
-			"pathVariables": [],
+			"pathVariables": {},
 			"pathVariableData": [],
 			"method": "GET",
 			"data": null,
@@ -1005,18 +351,19 @@
 			"auth": null,
 			"name": "Routes - List",
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
 			"currentHelper": null,
 			"helperAttributes": null
 		},
 		{
-			"id": "e83015c6-4ec3-5cdf-d4dc-35830c57d8bf",
+			"id": "967a263f-f95c-0e65-7894-c83311dd1887",
 			"headers": "",
 			"headerData": [],
 			"url": "localhost:9001/consumers",
-			"folder": "7be444ca-d85a-ea35-63f9-4ae5ec87c92c",
+			"folder": "0a7058db-f271-2ba0-7bed-d2385c0b18e3",
 			"queryParams": [],
-			"pathVariables": [],
+			"pathVariables": {},
 			"pathVariableData": [],
 			"method": "GET",
 			"data": null,
@@ -1024,79 +371,49 @@
 			"auth": null,
 			"name": "Consumers - List",
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
 			"currentHelper": null,
 			"helperAttributes": null
 		},
 		{
-			"id": "e952ab76-2876-34d9-a93f-63bf33a1567c",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/consumers/iwan.junaid@gmail.com/key-auth",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "Consumers - Provision Credentials to Consumer",
-			"rawModeData": "{\n  \"key\": \"000000\"\n}",
-			"folder": "7be444ca-d85a-ea35-63f9-4ae5ec87c92c",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "f2e623d1-5756-3316-7bc2-e29ebc920be1",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/consumers/tigatiga@gmail.com/oauth2",
-			"queryParams": [],
-			"pathVariables": [],
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "OAuth - Create Application",
-			"rawModeData": "{\n  \"name\": \"APP 33\",\n  \"client_id\": \"CLIENT_ID_33\",\n  \"client_secret\": \"CLIENT_SECRET_33\",\n  \"redirect_uri\": \"http://localhost:9800/cb\"\n}",
-			"folder": "5145499e-00ff-3444-cf16-fbb4d54190bc",
-			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "faf1da9a-4407-7e23-b43f-693bddb7d155",
+			"id": "9f88524b-2cf8-549f-3b3f-b95d2e555133",
 			"headers": "",
 			"headerData": [],
-			"url": "localhost:9001/plugins/378c5e62-d2cc-4ece-bdf8-5593069be7bb",
+			"url": "localhost:9001/plugins/enabled",
 			"queryParams": [],
-			"pathVariables": [],
+			"pathVariables": {},
 			"pathVariableData": [],
 			"auth": null,
 			"method": "GET",
 			"data": null,
 			"dataMode": "params",
-			"name": "Plugins - Retrieve Plugin",
+			"name": "Plugins - Enabled copy",
 			"descriptionFormat": "html",
-			"folder": "0369210e-8d6f-48cc-0075-dc0fba35c656",
+			"folder": "838df60e-fea6-60da-af53-41f9d314c40a",
 			"responses": [],
-			"collectionId": "253085a4-5b10-8b9c-a718-74072b0c4089",
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "b2ae9cd3-9b8b-9f13-6dec-6591da0da5e7",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:9001/services/204876a1-7a78-4fb2-9c7c-8804d310d8f5",
+			"folder": "721d593f-a795-6b3b-915b-4f6db8101a81",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"auth": null,
+			"name": "Services - Delete",
+			"responses": [],
+			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
+			"isFromCollection": true,
 			"currentHelper": null,
 			"helperAttributes": null
 		}
