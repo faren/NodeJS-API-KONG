@@ -225,6 +225,55 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Plugin - Delete service to OAuth",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9001/plugins/4f1dbb44-bb51-49b3-80d5-b0a5ac4f7caf",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"plugins",
+								"4f1dbb44-bb51-49b3-80d5-b0a5ac4f7caf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Plugin - Add service to ACL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"acl\",\n  \"config.whitelist\": \"group-api-v1-customers\"\n}"
+						},
+						"url": {
+							"raw": "localhost:9001/services/api-v1-customers/plugins",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"services",
+								"api-v1-customers",
+								"plugins"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -334,7 +383,7 @@
 			]
 		},
 		{
-			"name": "Application",
+			"name": "ApplicationOAuth2",
 			"description": "",
 			"item": [
 				{
@@ -440,6 +489,60 @@
 								"customers",
 								"oauth2",
 								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ACL",
+			"description": "",
+			"item": [
+				{
+					"name": "Associate Consumer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"group\": \"group-api-v1-customers\"\n}"
+						},
+						"url": {
+							"raw": "localhost:9001/consumers/oneone@gmail.com/acls",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"consumers",
+								"oneone@gmail.com",
+								"acls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List ACL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9001/acls",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"acls"
 							]
 						}
 					},
