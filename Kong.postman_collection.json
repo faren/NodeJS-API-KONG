@@ -1,422 +1,481 @@
 {
-	"id": "f47dbccf-c441-2e90-353b-af218508d104",
-	"name": "Kong",
-	"description": "This collection is for tutorial KONG basic",
-	"order": [
-		"4153a423-882c-d2f3-73b8-fa8d1673c62c"
-	],
-	"folders": [
+	"info": {
+		"_postman_id": "f47dbccf-c441-2e90-353b-af218508d104",
+		"name": "Kong",
+		"description": "This collection is for tutorial KONG basic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
 		{
-			"name": "Consumer",
+			"name": "Services",
 			"description": "",
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"order": [
-				"967a263f-f95c-0e65-7894-c83311dd1887",
-				"3329d880-af93-7dc9-7fd0-2f67cd2e4b04",
-				"44ba6b5a-7046-b78d-37e6-7e2506ef7786"
-			],
-			"owner": "3394051",
-			"folders_order": [],
-			"auth": null,
-			"id": "0a7058db-f271-2ba0-7bed-d2385c0b18e3"
-		},
-		{
-			"name": "Plugin",
-			"description": "",
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"order": [
-				"9f88524b-2cf8-549f-3b3f-b95d2e555133",
-				"2a87286c-f9a6-0e2c-97f0-44451c523050",
-				"1f8d9d27-6c1a-694a-d39f-730c32929cb8"
-			],
-			"owner": "3394051",
-			"folders_order": [],
-			"auth": null,
-			"id": "838df60e-fea6-60da-af53-41f9d314c40a"
+			"item": [
+				{
+					"name": "Services - List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9001/services",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Services - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"api-v1-customers\",\n  \"url\": \"http://172.19.0.4:10000\"\n}"
+						},
+						"url": {
+							"raw": "localhost:9001/services/",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"services",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Services - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9001/services/204876a1-7a78-4fb2-9c7c-8804d310d8f5",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"services",
+								"204876a1-7a78-4fb2-9c7c-8804d310d8f5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Routes",
 			"description": "",
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"order": [
-				"86bd84e2-1bfe-c0cb-e7d8-03581b241b57",
-				"356ad4fb-997a-f700-d01e-9e7d60faabca",
-				"15a57f51-e043-94b4-13dc-afed3e09bb4f"
-			],
-			"owner": "3394051",
-			"folders_order": [],
-			"auth": null,
-			"id": "69238981-1df9-370f-fd16-c4674117021a"
+			"item": [
+				{
+					"name": "Routes - List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9001/routes",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"routes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Routes - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"hosts\": [\"api.ct.id\"],\n  \"paths\": [\"/api/v1/customers\"]\n}"
+						},
+						"url": {
+							"raw": "localhost:9001/services/api-v1-customers/routes/",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"services",
+								"api-v1-customers",
+								"routes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Routes - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9001/routes/034c40b4-d9d9-4e34-a8d3-94b0a2194cd6",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"routes",
+								"034c40b4-d9d9-4e34-a8d3-94b0a2194cd6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
-			"name": "Services",
+			"name": "Plugin",
 			"description": "",
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"order": [
-				"3d937530-ba52-ba72-5191-d0ae0e896735",
-				"18aecca7-e569-4cf7-fa0b-38d105c28ceb",
-				"b2ae9cd3-9b8b-9f13-6dec-6591da0da5e7"
-			],
-			"owner": "3394051",
-			"folders_order": [],
-			"auth": null,
-			"id": "721d593f-a795-6b3b-915b-4f6db8101a81"
-		}
-	],
-	"folders_order": [
-		"721d593f-a795-6b3b-915b-4f6db8101a81",
-		"69238981-1df9-370f-fd16-c4674117021a",
-		"838df60e-fea6-60da-af53-41f9d314c40a",
-		"0a7058db-f271-2ba0-7bed-d2385c0b18e3"
-	],
-	"timestamp": 1531913071877,
-	"owner": "3394051",
-	"public": false,
-	"events": [],
-	"variables": [],
-	"auth": null,
-	"requests": [
-		{
-			"id": "15a57f51-e043-94b4-13dc-afed3e09bb4f",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/routes/034c40b4-d9d9-4e34-a8d3-94b0a2194cd6",
-			"folder": "69238981-1df9-370f-fd16-c4674117021a",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "DELETE",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Routes - Delete",
-			"responses": [],
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"currentHelper": null,
-			"helperAttributes": null
+			"item": [
+				{
+					"name": "Plugins - Enabled",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9001/plugins/enabled",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"plugins",
+								"enabled"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Plugins - List All Plugins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9001/plugins",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"plugins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Plugin - Add service to OAuth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"oauth2\",\n  \"config.scopes\": [\"read\", \"write\"],\n  \"config.mandatory_scope\": true,\n  \"config.enable_password_grant\": true,\n  \"config.accept_http_if_already_terminated\": true,\n  \"config.token_expiration\": 180,\n  \"config.global_credentials\": true\n}"
+						},
+						"url": {
+							"raw": "localhost:9001/services/api-v1-customers/plugins",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"services",
+								"api-v1-customers",
+								"plugins"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
-			"id": "18aecca7-e569-4cf7-fa0b-38d105c28ceb",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/services/",
-			"folder": "721d593f-a795-6b3b-915b-4f6db8101a81",
-			"queryParams": [],
-			"events": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"time": 1531988915850,
-			"name": "Services - Create",
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"responses": [],
-			"currentHelper": null,
-			"helperAttributes": null,
-			"rawModeData": "{\n  \"name\": \"api-v1-customers\",\n  \"url\": \"http://172.19.0.4:10000\"\n}"
-		},
-		{
-			"id": "1f8d9d27-6c1a-694a-d39f-730c32929cb8",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/services/api-v1-workers/plugins",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"events": [],
-			"auth": null,
-			"method": "POST",
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"data": [],
-			"dataMode": "raw",
-			"name": "Plugin - Add service to OAuth",
+			"name": "Consumer",
 			"description": "",
-			"descriptionFormat": "html",
-			"time": 1531914145559,
-			"version": 2,
-			"responses": [],
-			"folder": "838df60e-fea6-60da-af53-41f9d314c40a",
-			"currentHelper": null,
-			"helperAttributes": null,
-			"rawModeData": "{\n  \"name\": \"oauth2\",\n  \"config.scopes\": [\"read\", \"write\"],\n  \"config.mandatory_scope\": true,\n  \"config.enable_password_grant\": true,\n  \"config.accept_http_if_already_terminated\": true,\n  \"config.token_expiration\": 180,\n  \"config.global_credentials\": true\n}"
-		},
-		{
-			"id": "2a87286c-f9a6-0e2c-97f0-44451c523050",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/plugins",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Plugins - List All Plugins copy",
-			"folder": "838df60e-fea6-60da-af53-41f9d314c40a",
-			"responses": [],
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "3329d880-af93-7dc9-7fd0-2f67cd2e4b04",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
+			"item": [
 				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/consumers",
-			"folder": "0a7058db-f271-2ba0-7bed-d2385c0b18e3",
-			"queryParams": [],
-			"events": [
+					"name": "Consumers - List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9001/consumers",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"consumers"
+							]
+						}
+					},
+					"response": []
+				},
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "fa5431bd-b3c0-4cf5-8f2c-394a0cbf9250",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
+					"name": "Consumers - Create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fa5431bd-b3c0-4cf5-8f2c-394a0cbf9250",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"oneone@gmail.com\",\n  \"custom_id\": \"11\"\n}"
+						},
+						"url": {
+							"raw": "localhost:9001/consumers",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"consumers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consumers - Delete",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fa5431bd-b3c0-4cf5-8f2c-394a0cbf9250",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:9001/consumers/8f46d90a-25ab-4025-90e5-fe6538b394cc",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"consumers",
+								"8f46d90a-25ab-4025-90e5-fe6538b394cc"
+							]
+						},
+						"description": "Notes:\n\n- Delete consumer also remove all plugins configuration associated with this consumer."
+					},
+					"response": []
 				}
-			],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "Consumers - Create",
-			"rawModeData": "{\n  \"username\": \"tigatiga@gmail.com\",\n  \"custom_id\": \"33\"\n}",
-			"responses": [],
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"preRequestScript": null,
-			"tests": null,
-			"currentHelper": null,
-			"helperAttributes": null
+			]
 		},
 		{
-			"id": "356ad4fb-997a-f700-d01e-9e7d60faabca",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
+			"name": "Application",
+			"description": "",
+			"item": [
 				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
+					"name": "OAuth - Create Application",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"APP 11\",\n  \"client_id\": \"CLIENT_ID_11\",\n  \"client_secret\": \"CLIENT_SECRET_11\",\n  \"redirect_uri\": \"http://localhost:9800/cb\"\n}"
+						},
+						"url": {
+							"raw": "localhost:9001/consumers/oneone@gmail.com/oauth2",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"consumers",
+								"oneone@gmail.com",
+								"oauth2"
+							]
+						}
+					},
+					"response": []
 				}
-			],
-			"url": "localhost:9001/services/api-v1-customers/routes/",
-			"folder": "69238981-1df9-370f-fd16-c4674117021a",
-			"queryParams": [],
-			"events": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"time": 1531997129318,
-			"name": "Routes - Create",
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"responses": [],
-			"currentHelper": null,
-			"helperAttributes": null,
-			"rawModeData": "{\n  \"hosts\": [\"api.ct.id\"],\n  \"paths\": [\"/api/v1/customers\"]\n}"
+			]
 		},
 		{
-			"id": "3d937530-ba52-ba72-5191-d0ae0e896735",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/services",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"auth": null,
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"name": "Services - List",
-			"descriptionFormat": "html",
-			"folder": "721d593f-a795-6b3b-915b-4f6db8101a81",
-			"responses": [],
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"currentHelper": null,
-			"helperAttributes": null
+			"name": "OAuthToken",
+			"description": "",
+			"item": [
+				{
+					"name": "OAuth - Request Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Host",
+								"value": "api.ct.id"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"client_id\": \"CLIENT_ID_11\",\n  \"client_secret\": \"CLIENT_SECRET_11\",\n  \"grant_type\": \"password\",\n  \"provision_key\": \"kl3bUfe32WBcppmYFr1aZtXxzrBTL18l\",\n  \"authenticated_userid\": \"oneone@gmail.com\",\n  \"scope\": \"read\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:9443/api/v1/customers/oauth2/token/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"oauth2",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OAuth - Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Host",
+								"value": "api.ct.id"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"grant_type\": \"refresh_token\",\n  \"client_id\": \"CLIENT_ID_11\",\n  \"client_secret\": \"CLIENT_SECRET_11\",\n  \"refresh_token\": \"halEdslDD61bTvMxUGbPbu75DxdKmWdP\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:9443/api/v1/customers/oauth2/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
-			"id": "4153a423-882c-d2f3-73b8-fa8d1673c62c",
-			"headers": "Host: api.ct.id\n",
-			"headerData": [
-				{
-					"key": "Host",
-					"value": "api.ct.id",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9000/api/v1/customers",
-			"queryParams": [],
-			"events": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"time": 1532080003937,
 			"name": "Consume service",
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"responses": [],
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "44ba6b5a-7046-b78d-37e6-7e2506ef7786",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9001/consumers/8f46d90a-25ab-4025-90e5-fe6538b394cc",
-			"folder": "0a7058db-f271-2ba0-7bed-d2385c0b18e3",
-			"queryParams": [],
-			"events": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "fa5431bd-b3c0-4cf5-8f2c-394a0cbf9250",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Host",
+						"value": "api.ct.id"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer UYSLDGIZI8yIotLryGRp93jvF1YsYdHB"
 					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:9000/api/v1/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					]
 				}
-			],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "DELETE",
-			"data": [],
-			"dataMode": "raw",
-			"auth": null,
-			"name": "Consumers - Delete",
-			"description": "Notes:\n\n- Delete consumer also remove all plugins configuration associated with this consumer.",
-			"rawModeData": "",
-			"responses": [],
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"preRequestScript": null,
-			"tests": null,
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "86bd84e2-1bfe-c0cb-e7d8-03581b241b57",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/routes",
-			"folder": "69238981-1df9-370f-fd16-c4674117021a",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Routes - List",
-			"responses": [],
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "967a263f-f95c-0e65-7894-c83311dd1887",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/consumers",
-			"folder": "0a7058db-f271-2ba0-7bed-d2385c0b18e3",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Consumers - List",
-			"responses": [],
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "9f88524b-2cf8-549f-3b3f-b95d2e555133",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/plugins/enabled",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"auth": null,
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"name": "Plugins - Enabled copy",
-			"descriptionFormat": "html",
-			"folder": "838df60e-fea6-60da-af53-41f9d314c40a",
-			"responses": [],
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"currentHelper": null,
-			"helperAttributes": null
-		},
-		{
-			"id": "b2ae9cd3-9b8b-9f13-6dec-6591da0da5e7",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9001/services/204876a1-7a78-4fb2-9c7c-8804d310d8f5",
-			"folder": "721d593f-a795-6b3b-915b-4f6db8101a81",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "DELETE",
-			"data": null,
-			"dataMode": "params",
-			"auth": null,
-			"name": "Services - Delete",
-			"responses": [],
-			"collectionId": "f47dbccf-c441-2e90-353b-af218508d104",
-			"isFromCollection": true,
-			"currentHelper": null,
-			"helperAttributes": null
+			},
+			"response": []
 		}
 	]
 }
