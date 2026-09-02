@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kong API Gateway Revisited</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --text: #242424;
+        --muted: #6b6b6b;
+        --border: #e6e6e6;
+        --code-bg: #f6f8fa;
+        --link: #1a8917;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: #ffffff;
+        font-family: Charter, Georgia, Cambria, "Times New Roman", Times, serif;
+        line-height: 1.68;
+      }
+
+      main {
+        max-width: 740px;
+        margin: 0 auto;
+        padding: 56px 24px 96px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: sohne, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.18;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 42px;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin: 0 0 36px;
+        color: var(--muted);
+        font-family: sohne, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 21px;
+        line-height: 1.42;
+      }
+
+      h2 {
+        margin: 42px 0 12px;
+        font-size: 28px;
+      }
+
+      h3 {
+        margin: 30px 0 8px;
+        font-size: 22px;
+      }
+
+      p,
+      li {
+        font-size: 20px;
+      }
+
+      p {
+        margin: 0 0 22px;
+      }
+
+      ul {
+        margin: 0 0 24px;
+        padding-left: 28px;
+      }
+
+      li {
+        margin: 8px 0;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: underline;
+      }
+
+      code {
+        border-radius: 4px;
+        background: var(--code-bg);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 0.85em;
+        padding: 0.1em 0.25em;
+      }
+
+      pre {
+        margin: 18px 0 26px;
+        padding: 18px 20px;
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--code-bg);
+        line-height: 1.45;
+      }
+
+      pre code {
+        background: transparent;
+        padding: 0;
+        font-size: 15px;
+      }
+
+      .note {
+        margin: 28px 0;
+        padding: 18px 20px;
+        border-left: 4px solid var(--link);
+        background: #f7fbf7;
+        color: #2f3a2f;
+      }
+
+      .copy-note {
+        margin-bottom: 36px;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        color: var(--muted);
+        font-family: sohne, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="copy-note">
+        Medium-ready draft: buka file ini di browser, seleksi mulai dari judul sampai akhir artikel, copy, lalu paste ke editor Medium. Setelah paste, cek ulang code block dan link.
+      </div>
+
+      <article>
+        <h1>Kong API Gateway Revisited: Modernisasi PoC 2018 ke Kong Gateway OSS 3.9.3</h1>
+        <p class="subtitle">Belajar ulang Kong Gateway setelah delapan tahun: dari PoC Node.js sederhana menjadi baseline modern dengan Docker Compose, DB-less declarative configuration, dan plugin API gateway.</p>
+
+        <p>Pada tahun 2018 saya pernah membuat PoC sederhana mengenai Kong sebagai Microservice API Gateway. Waktu itu saya menggunakan Node.js API sederhana, Docker, PostgreSQL, Kong, dan konfigurasi melalui Admin API/Postman.</p>
+
+        <p>Tulisan lamanya masih ada di sini:</p>
+
+        <ul>
+          <li><a href="https://medium.com/@far3ns/kong-the-microservice-api-gateway-526c4ca0cfa6">Kong - The Microservice API Gateway</a></li>
+          <li><a href="https://medium.com/@far3ns/kong-oauth-2-0-plugin-38faf938a468">Kong - OAuth 2.0 Plugin</a></li>
+          <li><a href="https://github.com/faren/NodeJS-API-KONG">Repo PoC lama</a></li>
+        </ul>
+
+        <p>Delapan tahun kemudian, ecosystem Kong sudah banyak berubah. Konsep dasarnya masih sama, tetapi cara deployment, cara konfigurasi, dan pola operasionalnya sudah jauh lebih modern. Karena itu saya mencoba melakukan modernisasi PoC lama tersebut menggunakan stack yang lebih relevan untuk hari ini.</p>
+
+        <p>Repo modernisasi: <a href="https://github.com/faren/NodeJS-API-KONG">https://github.com/faren/NodeJS-API-KONG</a></p>
+
+        <h2>Apa yang Ingin Dibuktikan</h2>
+
+        <p>PoC ini bukan bertujuan membuat aplikasi Node.js yang kompleks. Backend API-nya tetap sengaja dibuat sederhana supaya fokus pembelajaran tetap berada di Kong Gateway.</p>
+
+        <p>Yang ingin dibuktikan:</p>
+
+        <ul>
+          <li>Kong bisa menjadi API Gateway di depan backend service.</li>
+          <li>Service dan Route bisa didefinisikan secara deklaratif.</li>
+          <li>Plugin dapat dipasang tanpa mengubah kode backend.</li>
+          <li>Kong dapat menjalankan policy seperti rate limit, API key, ACL, correlation id, dan metrics.</li>
+          <li>Konfigurasi gateway bisa disimpan sebagai file sehingga lebih mudah masuk ke Git, code review, dan CI/CD.</li>
+        </ul>
+
+        <h2>Perbandingan dengan PoC 2018</h2>
+
+        <p>PoC 2018 menggunakan:</p>
+
+        <ul>
+          <li>Node.js image <code>node:carbon</code></li>
+          <li>Express 4</li>
+          <li><code>body-parser</code></li>
+          <li>Kong dengan PostgreSQL</li>
+          <li>Konfigurasi melalui Admin API/Postman collection</li>
+        </ul>
+
+        <p>PoC versi baru menggunakan:</p>
+
+        <ul>
+          <li>Node.js 22</li>
+          <li>Express 5</li>
+          <li>Docker Compose</li>
+          <li>Kong Gateway OSS 3.9.3</li>
+          <li>DB-less declarative configuration</li>
+          <li>Konfigurasi Kong dalam <code>kong/kong.yml</code></li>
+          <li>Automated test menggunakan <code>node:test</code> dan <code>supertest</code></li>
+        </ul>
+
+        <p>Perubahan paling penting adalah perpindahan dari konfigurasi imperative via Admin API menjadi declarative configuration.</p>
+
+        <h2>Arsitektur Sederhana</h2>
+
+        <p>Alurnya seperti ini:</p>
+
+        <pre><code>Client / curl
+  -&gt; Kong Gateway :8000
+  -&gt; Node.js API :10000
+  -&gt; Kong Gateway
+  -&gt; Client</code></pre>
+
+        <p>Jika akses langsung ke backend:</p>
+
+        <pre><code>curl http://localhost:10000/api/v1/customers</code></pre>
+
+        <p>Jika akses melalui Kong:</p>
+
+        <pre><code>curl http://localhost:8000/api/v1/customers</code></pre>
+
+        <p>Response body-nya sama, tetapi response dari Kong memiliki header tambahan seperti:</p>
+
+        <pre><code>Server: kong/3.9.3
+Via: 1.1 kong/3.9.3
+X-Kong-Upstream-Latency
+X-Kong-Proxy-Latency
+X-Request-Id
+X-RateLimit-...</code></pre>
+
+        <p>Header tersebut menunjukkan bahwa request sudah melewati Kong Gateway.</p>
+
+        <h2>Konsep Utama Kong</h2>
+
+        <p>Untuk mulai belajar ulang Kong, ada tiga konsep utama yang perlu dipegang terlebih dahulu.</p>
+
+        <h3>Service</h3>
+
+        <p>Service adalah backend atau upstream API yang akan dituju oleh Kong.</p>
+
+        <p>Contoh:</p>
+
+        <pre><code>services:
+  - name: nodejs-api
+    url: http://api:10000</code></pre>
+
+        <p>Artinya Kong mengenal backend bernama <code>nodejs-api</code> dengan alamat <code>http://api:10000</code>.</p>
+
+        <p>Dalam konteks Docker Compose, <code>api</code> adalah nama service container Node.js.</p>
+
+        <h3>Route</h3>
+
+        <p>Route adalah aturan path, host, atau method yang digunakan Kong untuk menentukan request harus diteruskan ke Service mana.</p>
+
+        <p>Contoh:</p>
+
+        <pre><code>routes:
+  - name: customers-v1-public
+    paths:
+      - /api/v1/customers
+    strip_path: false</code></pre>
+
+        <p>Artinya request ke:</p>
+
+        <pre><code>http://localhost:8000/api/v1/customers</code></pre>
+
+        <p>akan diteruskan ke backend:</p>
+
+        <pre><code>http://api:10000/api/v1/customers</code></pre>
+
+        <h3>Plugin</h3>
+
+        <p>Plugin adalah fitur tambahan di Kong Gateway. Dengan plugin, kita bisa menambahkan policy tanpa mengubah kode backend.</p>
+
+        <p>Contoh plugin yang digunakan dalam PoC ini:</p>
+
+        <ul>
+          <li><code>correlation-id</code></li>
+          <li><code>rate-limiting</code></li>
+          <li><code>request-size-limiting</code></li>
+          <li><code>prometheus</code></li>
+          <li><code>key-auth</code></li>
+          <li><code>acl</code></li>
+        </ul>
+
+        <p>Contoh konfigurasi global plugin:</p>
+
+        <pre><code>plugins:
+  - name: correlation-id
+    config:
+      header_name: X-Request-Id
+      generator: uuid
+      echo_downstream: true
+
+  - name: rate-limiting
+    config:
+      minute: 60
+      policy: local</code></pre>
+
+        <p>Dengan konfigurasi ini, Kong akan menambahkan request id dan membatasi request per menit.</p>
+
+        <h2>Menjalankan PoC</h2>
+
+        <p>Clone repo:</p>
+
+        <pre><code>git clone https://github.com/faren/NodeJS-API-KONG.git
+cd NodeJS-API-KONG</code></pre>
+
+        <p>Jalankan stack:</p>
+
+        <pre><code>docker compose up --build</code></pre>
+
+        <p>Kong akan expose beberapa port:</p>
+
+        <ul>
+          <li>Proxy: <a href="http://localhost:8000">http://localhost:8000</a></li>
+          <li>Admin API lokal: <a href="http://localhost:8001">http://localhost:8001</a></li>
+          <li>Status API: <a href="http://localhost:8100">http://localhost:8100</a></li>
+        </ul>
+
+        <p>Backend Node.js juga dibuka langsung untuk pembanding:</p>
+
+        <ul>
+          <li>API langsung: <a href="http://localhost:10000">http://localhost:10000</a></li>
+        </ul>
+
+        <h2>Test Public Route</h2>
+
+        <p>Request langsung ke Node.js API:</p>
+
+        <pre><code>curl http://localhost:10000/api/v1/customers</code></pre>
+
+        <p>Request melalui Kong:</p>
+
+        <pre><code>curl -i http://localhost:8000/api/v1/customers</code></pre>
+
+        <p>Jika berhasil, response akan berisi data customers dan header dari Kong.</p>
+
+        <h2>Test Secured Route</h2>
+
+        <p>PoC ini juga menyediakan route secured dengan plugin <code>key-auth</code> dan <code>acl</code>.</p>
+
+        <p>Tanpa API key:</p>
+
+        <pre><code>curl -i http://localhost:8000/secure/api/v1/customers</code></pre>
+
+        <p>Hasilnya:</p>
+
+        <pre><code>HTTP/1.1 401 Unauthorized</code></pre>
+
+        <p>Dengan API key:</p>
+
+        <pre><code>curl -i http://localhost:8000/secure/api/v1/customers \
+  -H "apikey: internal-demo-key"</code></pre>
+
+        <p>Hasilnya:</p>
+
+        <pre><code>HTTP/1.1 200 OK</code></pre>
+
+        <p>Ini menunjukkan Kong dapat memvalidasi consumer sebelum request diteruskan ke backend.</p>
+
+        <h2>Consumer dan ACL</h2>
+
+        <p>Di Kong, Consumer merepresentasikan pengguna aplikasi, partner, sistem internal, atau client yang mengakses API.</p>
+
+        <p>Contoh:</p>
+
+        <pre><code>consumers:
+  - username: bpjs-internal-app
+    keyauth_credentials:
+      - key: internal-demo-key
+    acls:
+      - group: internal-apps</code></pre>
+
+        <p>Artinya ada consumer bernama <code>bpjs-internal-app</code> yang memiliki API key <code>internal-demo-key</code> dan masuk ke group ACL <code>internal-apps</code>.</p>
+
+        <p>Route secured hanya mengizinkan consumer dari group tersebut.</p>
+
+        <h2>Metrics</h2>
+
+        <p>PoC ini juga mengaktifkan plugin Prometheus.</p>
+
+        <p>Metrics bisa dicek dengan:</p>
+
+        <pre><code>curl http://localhost:8001/metrics</code></pre>
+
+        <p>Dalam production, metrics ini dapat dikirim ke Prometheus dan divisualisasikan di Grafana.</p>
+
+        <h2>Kenapa DB-less?</h2>
+
+        <p>Pada PoC lama, Kong menggunakan PostgreSQL sebagai datastore. Cara itu masih valid untuk banyak kebutuhan, tetapi untuk belajar ulang dan PoC modern, DB-less mode lebih sederhana.</p>
+
+        <p>Dengan DB-less mode:</p>
+
+        <ul>
+          <li>Tidak perlu menjalankan database.</li>
+          <li>Konfigurasi disimpan dalam file.</li>
+          <li>Perubahan bisa direview di Git.</li>
+          <li>Cocok untuk belajar declarative configuration.</li>
+          <li>Cocok untuk memperkenalkan pola GitOps.</li>
+        </ul>
+
+        <p>Namun DB-less bukan jawaban untuk semua skenario. Untuk environment enterprise atau core workload, perlu dipertimbangkan mode lain seperti traditional mode, hybrid mode, atau Kong Konnect.</p>
+
+        <h2>Catatan untuk Skala Enterprise</h2>
+
+        <p>Untuk skala organisasi besar, API Gateway bukan hanya masalah routing. Yang lebih penting adalah operating model.</p>
+
+        <p>Hal-hal yang perlu dipikirkan:</p>
+
+        <ul>
+          <li>Bagaimana service didaftarkan?</li>
+          <li>Siapa yang boleh mengubah route dan plugin?</li>
+          <li>Bagaimana approval konfigurasi production?</li>
+          <li>Bagaimana audit log perubahan?</li>
+          <li>Bagaimana integrasi dengan IAM atau SSO?</li>
+          <li>Bagaimana monitoring, logging, dan tracing?</li>
+          <li>Bagaimana rate limit antar channel atau partner?</li>
+          <li>Bagaimana disaster recovery?</li>
+          <li>Bagaimana strategi migrasi dari legacy ke microservice?</li>
+        </ul>
+
+        <p>Pada skala seperti ini, Kong dapat menjadi enabler untuk transisi microservice secara bertahap. Backend lama bisa tetap berjalan, sementara API baru atau microservice baru dapat diperkenalkan sedikit demi sedikit di belakang gateway.</p>
+
+        <h2>Penutup</h2>
+
+        <p>Setelah delapan tahun, konsep dasar Kong masih terasa familiar: Service, Route, Consumer, dan Plugin. Tetapi cara mengelolanya sudah lebih matang.</p>
+
+        <p>Jika dulu PoC cukup membuktikan bahwa Kong bisa meneruskan request ke Node.js API, versi modern ini mulai memperkenalkan pola yang lebih dekat dengan kebutuhan production:</p>
+
+        <ul>
+          <li>declarative configuration</li>
+          <li>plugin-based policy</li>
+          <li>API key dan ACL</li>
+          <li>rate limit</li>
+          <li>correlation id</li>
+          <li>metrics</li>
+          <li>automated test</li>
+          <li>Docker Compose based local environment</li>
+        </ul>
+
+        <p>PoC ini adalah langkah awal untuk belajar ulang Kong Gateway secara bertahap sebelum masuk ke topik yang lebih serius seperti OIDC/JWT, OpenAPI, decK, Redis-backed rate limiting, observability stack, Kubernetes Ingress Controller, hybrid mode, dan Kong Konnect.</p>
+      </article>
+    </main>
+  </body>
+</html>
