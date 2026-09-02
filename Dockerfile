@@ -1,14 +1,13 @@
-FROM node:carbon
+FROM node:22-alpine
 
-# create work directory
 WORKDIR /usr/src/app
 
-# copy package.json
-COPY package.json ./
-RUN npm install
+ENV NODE_ENV=production
 
-# copy source code
-COPY . .
+COPY package*.json ./
+RUN npm install --omit=dev
+
+COPY src ./src
 
 EXPOSE 10000
 

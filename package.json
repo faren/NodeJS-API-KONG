@@ -1,14 +1,30 @@
 {
-    "name": "docker_node_for_kong",
-    "version": "1.0.0",
-    "description": "Node.js on Docker for kong",
-    "author": "Faren",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "dependencies": {
-        "express": "^4.16.1",
-        "body-parser": "1.18.3"
-    }
+  "name": "nodejs-api-kong-modern",
+  "version": "2.0.0",
+  "description": "Modern Node.js API Gateway PoC with Kong OSS, DB-less declarative config, Docker Compose, and plugin examples.",
+  "author": "Faren",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/faren/NodeJS-API-KONG.git"
+  },
+  "homepage": "https://github.com/faren/NodeJS-API-KONG#readme",
+  "type": "commonjs",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.2.2"
+  }
 }
