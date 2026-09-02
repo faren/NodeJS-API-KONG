@@ -1,0 +1,60 @@
+_format_version: "3.0"
+_transform: true
+
+services:
+  - name: nodejs-api
+    url: http://api:10000
+    routes:
+      - name: health
+        paths:
+          - /health
+        strip_path: false
+
+      - name: customers-v1-public
+        paths:
+          - /api/v1/customers
+        strip_path: false
+
+      - name: clients-v1-public
+        paths:
+          - /api/v1/clients
+        strip_path: false
+
+      - name: internal-secured-api
+        paths:
+          - /secure
+        strip_path: true
+        plugins:
+          - name: key-auth
+            config:
+              key_names:
+                - apikey
+          - name: acl
+            config:
+              allow:
+                - internal-apps
+
+plugins:
+  - name: correlation-id
+    config:
+      header_name: X-Request-Id
+      generator: uuid
+      echo_downstream: true
+
+  - name: rate-limiting
+    config:
+      minute: 60
+      policy: local
+
+  - name: request-size-limiting
+    config:
+      allowed_payload_size: 1
+
+  - name: prometheus
+
+consumers:
+  - username: bpjs-internal-app
+    keyauth_credentials:
+      - key: internal-demo-key
+    acls:
+      - group: internal-apps
